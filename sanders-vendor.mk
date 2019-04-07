@@ -137,6 +137,9 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/motorola/sanders/proprietary/etc/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
     vendor/motorola/sanders/proprietary/etc/permissions/qti-vzw-ims-internal.xml:system/etc/permissions/qti-vzw-ims-internal.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/mot_dtv_permissions.xml:system/etc/permissions/mot_dtv_permissions.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.hardware.dtv.xml:system/etc/permissions/com.motorola.hardware.dtv.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.google.android.tv.installed.xml:system/etc/permissions/com.google.android.tv.installed.xml \
     vendor/motorola/sanders/proprietary/vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Argentina.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Argentina.bin \
@@ -1323,6 +1326,10 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
     vendor/motorola/sanders/proprietary/vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
     vendor/motorola/sanders/proprietary/vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.sensorscalibrate@1.0.so \
+    vendor/motorola/sanders/proprietary/lib/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvhal.so \
+    vendor/motorola/sanders/proprietary/lib/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvtuner.so \
+    vendor/motorola/sanders/proprietary/lib64/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvtuner.so \
+    vendor/motorola/sanders/proprietary/lib64/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvhal.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
     vendor/motorola/sanders/proprietary/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar:system/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar \
@@ -1339,46 +1346,46 @@ PRODUCT_COPY_FILES += \
 
 # WFD
 PRODUCT_COPY_FILES += \
-     vendor/motorola/sanders/proprietary/bin/wfdservice:$(TARGET_COPY_OUT_VENDOR)/bin/wfdservice \
-     vendor/motorola/sanders/proprietary/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdservice.rc \
-     vendor/motorola/sanders/proprietary/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
-     vendor/motorola/sanders/proprietary/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfigsink.xml \
-     vendor/motorola/sanders/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-     vendor/motorola/sanders/proprietary/lib/extractors/libmmparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/extractors/libmmparser.so \
-     vendor/motorola/sanders/proprietary/lib/libaacwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaacwrapper.so \
-     vendor/motorola/sanders/proprietary/lib/libFileMux.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFileMux.so \
-     vendor/motorola/sanders/proprietary/lib/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal.so \
-     vendor/motorola/sanders/proprietary/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmparser_lite.so \
-     vendor/motorola/sanders/proprietary/lib/libmmrtpdecoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmrtpdecoder.so \
-     vendor/motorola/sanders/proprietary/lib/libmmrtpencoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmrtpencoder.so \
-     vendor/motorola/sanders/proprietary/lib/libOmxMux.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxMux.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdavenhancements.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdavenhancements.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdclient.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdcodecv4l2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcodecv4l2.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdcommonutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdconfigutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdconfigutils.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdmminterface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmminterface.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdmmsink.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmsink.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdmmsrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmsrc.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdnative.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdnative.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdrtsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdrtsp.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdservice.so \
-     vendor/motorola/sanders/proprietary/lib/libwfdsm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdsm.so \
-     vendor/motorola/sanders/proprietary/lib/libwfduibcinterface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcinterface.so \
-     vendor/motorola/sanders/proprietary/lib/libwfduibcsink.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsink.so \
-     vendor/motorola/sanders/proprietary/lib/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsinkinterface.so \
-     vendor/motorola/sanders/proprietary/lib/libwfduibcsrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsrc.so \
-     vendor/motorola/sanders/proprietary/lib/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfduibcsrcinterface.so \
-     vendor/motorola/sanders/proprietary/lib64/extractors/libmmparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/extractors/libmmparser.so \
-     vendor/motorola/sanders/proprietary/lib64/libaacwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaacwrapper.so \
-     vendor/motorola/sanders/proprietary/lib64/libFileMux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFileMux.so \
-     vendor/motorola/sanders/proprietary/lib64/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal.so \
-     vendor/motorola/sanders/proprietary/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmparser_lite.so \
-     vendor/motorola/sanders/proprietary/lib64/libmmrtpdecoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmrtpdecoder.so \
-     vendor/motorola/sanders/proprietary/lib64/libmmrtpencoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmrtpencoder.so \
-     vendor/motorola/sanders/proprietary/lib64/libOmxMux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxMux.so \
-     vendor/motorola/sanders/proprietary/lib64/libwfdclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdclient.so \
-     vendor/motorola/sanders/proprietary/lib64/libwfdnative.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdnative.so \
+     vendor/motorola/sanders/proprietary/bin/wfdservice:system/bin/wfdservice \
+     vendor/motorola/sanders/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
+     vendor/motorola/sanders/proprietary/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
+     vendor/motorola/sanders/proprietary/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
+     vendor/motorola/sanders/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+     vendor/motorola/sanders/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
+     vendor/motorola/sanders/proprietary/lib/libaacwrapper.so:system/lib/libaacwrapper.so \
+     vendor/motorola/sanders/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
+     vendor/motorola/sanders/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
+     vendor/motorola/sanders/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
+     vendor/motorola/sanders/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+     vendor/motorola/sanders/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
+     vendor/motorola/sanders/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdavenhancements.so:system/lib/libwfdavenhancements.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdclient.so:system/lib/libwfdclient.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdcodecv4l2.so:system/lib/libwfdcodecv4l2.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdcommonutils.so:system/lib/libwfdcommonutils.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdconfigutils.so:system/lib/libwfdconfigutils.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdmminterface.so:system/lib/libwfdmminterface.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdmmsink.so:system/lib/libwfdmmsink.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdmmsrc.so:system/lib/libwfdmmsrc.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdnative.so:system/lib/libwfdnative.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdrtsp.so:system/lib/libwfdrtsp.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdservice.so:system/lib/libwfdservice.so \
+     vendor/motorola/sanders/proprietary/lib/libwfdsm.so:system/lib/libwfdsm.so \
+     vendor/motorola/sanders/proprietary/lib/libwfduibcinterface.so:system/lib/libwfduibcinterface.so \
+     vendor/motorola/sanders/proprietary/lib/libwfduibcsink.so:system/lib/libwfduibcsink.so \
+     vendor/motorola/sanders/proprietary/lib/libwfduibcsinkinterface.so:system/lib/libwfduibcsinkinterface.so \
+     vendor/motorola/sanders/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
+     vendor/motorola/sanders/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
+     vendor/motorola/sanders/proprietary/lib64/extractors/libmmparser.so:system/lib64/extractors/libmmparser.so \
+     vendor/motorola/sanders/proprietary/lib64/libaacwrapper.so:system/lib64/libaacwrapper.so \
+     vendor/motorola/sanders/proprietary/lib64/libFileMux.so:system/lib64/libFileMux.so \
+     vendor/motorola/sanders/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
+     vendor/motorola/sanders/proprietary/lib64/libmmparser_lite.so:system/lib64/libmmparser_lite.so \
+     vendor/motorola/sanders/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
+     vendor/motorola/sanders/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
+     vendor/motorola/sanders/proprietary/lib64/libOmxMux.so:system/lib64/libOmxMux.so \
+     vendor/motorola/sanders/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
+     vendor/motorola/sanders/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
      vendor/motorola/sanders/proprietary/vendor/bin/wifidisplayhalservice:/$(TARGET_COPY_OUT_VENDOR)/vendor/bin/wifidisplayhalservice \
      vendor/motorola/sanders/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:/$(TARGET_COPY_OUT_VENDOR)/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
      vendor/motorola/sanders/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
@@ -1427,6 +1434,9 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     CNEService \
     WfdService \
-    WfdCommon
+    WfdCommon \
+    DTVPlayer \
+    DTVService
+
 
 
