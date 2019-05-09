@@ -28,6 +28,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
     vendor/motorola/sanders/proprietary/vendor/bin/pm-proxy:$(TARGET_COPY_OUT_VENDOR)/bin/pm-proxy \
     vendor/motorola/sanders/proprietary/vendor/bin/pm-service:$(TARGET_COPY_OUT_VENDOR)/bin/pm-service \
+    vendor/motorola/sanders/proprietary/bin/perfservice:system/bin/perfservice \
     vendor/motorola/sanders/proprietary/bin/ptt_socket_app:system/bin/ptt_socket_app \
     vendor/motorola/sanders/proprietary/vendor/bin/qmi_motext_hook:$(TARGET_COPY_OUT_VENDOR)/bin/qmi_motext_hook \
     vendor/motorola/sanders/proprietary/vendor/bin/qseecomd:$(TARGET_COPY_OUT_VENDOR)/bin/qseecomd \
@@ -1326,24 +1327,22 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
     vendor/motorola/sanders/proprietary/vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
     vendor/motorola/sanders/proprietary/vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.sensorscalibrate@1.0.so \
-    vendor/motorola/sanders/proprietary/lib/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvhal.so \
-    vendor/motorola/sanders/proprietary/lib/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvtuner.so \
-    vendor/motorola/sanders/proprietary/lib64/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvtuner.so \
-    vendor/motorola/sanders/proprietary/lib64/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvhal.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
     vendor/motorola/sanders/proprietary/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar:system/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar \
+    vendor/motorola/sanders/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/motorola/sanders/proprietary/vendor/etc/init/android.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@1.0-service.rc
 
 # DTV Libs
 PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/etc/permissions/mot_dtv_permissions.xml:system/etc/permissions/mot_dtv_permissions.xml \
     vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.hardware.dtv.xml:system/etc/permissions/com.motorola.hardware.dtv.xml \
-    vendor/motorola/sanders/proprietary/vendor/lib/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvtuner.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvtuner.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvhal.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)lib64/libdtvhal.so \
-
+    vendor/motorola/sanders/proprietary/etc/permissions/com.google.android.tv.installed.xml:system/etc/permissions/com.google.android.tv.installed.xml \
+    vendor/motorola/sanders/proprietary/lib/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvhal.so \
+    vendor/motorola/sanders/proprietary/lib/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvtuner.so \
+    vendor/motorola/sanders/proprietary/lib64/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvtuner.so \
+    vendor/motorola/sanders/proprietary/lib64/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvhal.so 
+    
 # WFD
 PRODUCT_COPY_FILES += \
      vendor/motorola/sanders/proprietary/bin/wfdservice:system/bin/wfdservice \
@@ -1386,18 +1385,17 @@ PRODUCT_COPY_FILES += \
      vendor/motorola/sanders/proprietary/lib64/libOmxMux.so:system/lib64/libOmxMux.so \
      vendor/motorola/sanders/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
      vendor/motorola/sanders/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
-     vendor/motorola/sanders/proprietary/vendor/bin/wifidisplayhalservice:/$(TARGET_COPY_OUT_VENDOR)/vendor/bin/wifidisplayhalservice \
-     vendor/motorola/sanders/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:/$(TARGET_COPY_OUT_VENDOR)/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
-     vendor/motorola/sanders/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
-     vendor/motorola/sanders/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-     vendor/motorola/sanders/proprietary/vendor/lib/libmmosal_proprietary.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/libmmosal_proprietary.so \
-     vendor/motorola/sanders/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/libwfdcommonutils_proprietary.so \
-     vendor/motorola/sanders/proprietary/vendor/lib/libwfdhaldsmanager.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/libwfdhaldsmanager.so \
-     vendor/motorola/sanders/proprietary/vendor/lib/libwfdmmservice.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/libwfdmmservice.so \
-     vendor/motorola/sanders/proprietary/vendor/lib/libwfdmodulehdcpsession.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib/libwfdmodulehdcpsession.so \
-     vendor/motorola/sanders/proprietary/vendor/lib64/libmmosal_proprietary.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib64/libmmosal_proprietary.so \
-     vendor/motorola/sanders/proprietary/vendor/lib64/libwfdhdcpcp.so:/$(TARGET_COPY_OUT_VENDOR)/vendor/lib64/libwfdhdcpcp.so
-
+     vendor/motorola/sanders/proprietary/vendor/bin/wifidisplayhalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wifidisplayhalservice \
+     vendor/motorola/sanders/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
+     vendor/motorola/sanders/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
+     vendor/motorola/sanders/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+     vendor/motorola/sanders/proprietary/vendor/lib/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal_proprietary.so \
+     vendor/motorola/sanders/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
+     vendor/motorola/sanders/proprietary/vendor/lib/libwfdhaldsmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhaldsmanager.so \
+     vendor/motorola/sanders/proprietary/vendor/lib/libwfdmmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmservice.so \
+     vendor/motorola/sanders/proprietary/vendor/lib/libwfdmodulehdcpsession.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmodulehdcpsession.so \
+     vendor/motorola/sanders/proprietary/vendor/lib64/libmmosal_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal_proprietary.so \
+     vendor/motorola/sanders/proprietary/vendor/lib64/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdhdcpcp.so
 
 PRODUCT_PACKAGES += \
     libqct_resampler \
@@ -1405,16 +1403,14 @@ PRODUCT_PACKAGES += \
     embms \
     com.qti.location.sdk \
     com.qti.snapdragon.sdk.display \
-    DTVPlayer \
-    DTVService \
     embmslibrary \
     imscmlibrary \
     qcrilhook \
     com.qualcomm.location \
     ims \
+    imssettings \
     qcrilmsgtunnel \
     izat.xt.srv \
-    qti-telephony-common \
     QtiTelephonyServicelibrary \
     atfwd \
     cneapiclient \
@@ -1433,10 +1429,8 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleCS47L35 \
     QtiTelephonyService \
     CNEService \
-    WfdService \
-    WfdCommon \
     DTVPlayer \
-    DTVService
-
-
+    DTVService \
+    WfdService \
+    WfdCommon
 
